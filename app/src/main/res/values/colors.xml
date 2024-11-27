@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#000080</color>
+    <color name="purple_500">#000080</color>
+    <color name="purple_700">#000080</color>
+    <color name="text_bg_start">#0C57D1</color>
+    <color name="text_bg_starttt">#70022560</color>
+    <color name="text_bg_end">#082F7C</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#c9c9c9c9</color>
+    <color name="exp">#52C9C9C9</color>
+    <color name="orange">#FF9800</color>
+    <color name="background_color">#48C9C9C9</color>
+
+</resources>

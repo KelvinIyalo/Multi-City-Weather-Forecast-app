@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Multi-City Weather Forecast</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="search_weather">Search Weather by location</string>
+    <string name="location_holder">Ikeja, Lagos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="has_been_deleted_from_favorite">%1$s has been deleted from favorite cities</string>
+    <string name="you_are_about_to_delete_from_favorite">You are about to delete %1$s from Favorite cities</string>
+    <string name="has_been_added_to_favorite">has been added to Favorite</string>
+    <string name="celcius">°C</string>
+    <string name="percentage_sign">%</string>
+    <string name="km_hr">Km/Hr</string>
+    <string name="multi_city_weather_forecast">Multi-City Weather Forecast</string>
+</resources>
