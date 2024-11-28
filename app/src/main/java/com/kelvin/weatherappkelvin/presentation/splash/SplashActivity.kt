@@ -39,6 +39,7 @@ class SplashActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks 
 
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
         lifecycleScope.launch {
+            Permissions.requestLocation(this@SplashActivity)
             delay(1200L)
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()

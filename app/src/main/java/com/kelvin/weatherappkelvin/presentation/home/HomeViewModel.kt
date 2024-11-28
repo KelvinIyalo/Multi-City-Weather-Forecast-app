@@ -29,11 +29,7 @@ class HomeViewModel @Inject constructor(
     fun getWeather(): LiveData<UiState<WeatherReportEntity>> {
 
         // Step 1: Observe local data and emit it immediately when it becomes available
-       fetchLocalWeatherData(isEmpty = { isNull ->
-           if (isNull){
-               mergedLiveData.postValue(UiState.Loading)
-           }
-       })
+       fetchLocalWeatherData()
 
         // Step 2: Observe remote data when location becomes available
         viewModelScope.launch {
@@ -57,15 +53,13 @@ class HomeViewModel @Inject constructor(
         return mergedLiveData
     }
 
-    private fun fetchLocalWeatherData(isEmpty:(Boolean) ->Unit) {
+    private fun fetchLocalWeatherData() {
         val localData = getWeatherByLocationFromDatabaseUseCase()
         localData.observeForever { weatherEntity ->
             if (weatherEntity != null) {
-                isEmpty.invoke(false)
                 mergedLiveData.postValue(UiState.Success(weatherEntity))
             } else {
-                isEmpty.invoke(true)
-                mergedLiveData.postValue(UiState.DisplayError("No data available locally"))
+                mergedLiveData.postValue(UiState.Loading)
             }
         }
     }
